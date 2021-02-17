@@ -41,7 +41,11 @@ object Main extends App {
   fx1(veganCook) // ok per def
 
   fx1(pizzaCook)
-//  fx2(veganCook)
+//  fx2(veganCook) // compilation error
 
-//  type ZIO[-R, E, A]
+  // i.e. pizzaCook can be veganCook but
+  // veganCook cannot be a pizzaCook
+  // does it make sense for you?
+
+//  type ZIO[-R, +E, +A]
 }
